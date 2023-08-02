@@ -9,6 +9,18 @@ const Shop = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
+
+        // const load = async () => {
+        //     try{
+        //         const res = await fetch('fakeData/products.json')
+        //         const data = await res.json();
+        //         setProducts(data);
+        //     }catch(err){
+        //         console.log(err);
+        //     }
+        // }
+        // load();
+
         fetch('fakeData/products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -24,7 +36,7 @@ const Shop = () => {
         const storedCart = getShoppingCart();
         let finalCart = [];
 
-        
+
         // object er upor for in loop
         for (const id in storedCart) {
             const addedProductInLocalStorage = products.find(product => product.id === id)  //finding added product from local storage using id (product{eita hoilo upor e sob product theke find koira ekta product er id} er id === addedProductInLocalStorage er id)
