@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './Shop.css'
 import { useEffect } from 'react';
-import Products from './products/Products';
-import Cart from './Cart/Cart';
-import { addToDb, getShoppingCart } from '../assets/utilities/fakedb';
+import Products from '../products/Products';
+import Cart from '../Cart/Cart';
+import { addToDb, getShoppingCart } from '../../assets/utilities/fakedb';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
